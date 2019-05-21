@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plausibility:</strong>
+  <%= @sighting.plausibility %>
+</p>
+
+<p>
+  <strong>Incident occurrence:</strong>
+  <%= @sighting.incident_occurrence %>
+</p>
+
+<p>
+  <strong>Incident location:</strong>
+  <%= @sighting.incident_location %>
+</p>
+
+<p>
+  <strong>Witness gibberish:</strong>
+  <%= @sighting.witness_gibberish %>
+</p>
+
+<p>
+  <strong>Blood alcohol level:</strong>
+  <%= @sighting.blood_alcohol_level %>
+</p>
+
+<p>
+  <strong>Responding police department location:</strong>
+  <%= @sighting.responding_police_department_location %>
+</p>
+
+<p>
+  <strong>Incident long:</strong>
+  <%= @sighting.incident_long %>
+</p>
+
+<p>
+  <strong>Incident lat:</strong>
+  <%= @sighting.incident_lat %>
+</p>
+
+<%= link_to 'Edit', edit_sighting_path(@sighting) %> |
+<%= link_to 'Back', sightings_path %>

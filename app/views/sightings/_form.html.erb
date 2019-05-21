@@ -1,0 +1,57 @@
+<%= form_with(model: sighting, local: true) do |form| %>
+  <% if sighting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sighting.errors.count, "error") %> prohibited this sighting from being saved:</h2>
+
+      <ul>
+      <% sighting.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :plausibility %>
+    <%= form.number_field :plausibility %>
+  </div>
+
+  <div class="field">
+    <%= form.label :incident_occurrence %>
+    <%= form.datetime_select :incident_occurrence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :incident_location %>
+    <%= form.text_field :incident_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :witness_gibberish %>
+    <%= form.text_field :witness_gibberish %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blood_alcohol_level %>
+    <%= form.text_field :blood_alcohol_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :responding_police_department_location %>
+    <%= form.text_field :responding_police_department_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :incident_long %>
+    <%= form.text_field :incident_long %>
+  </div>
+
+  <div class="field">
+    <%= form.label :incident_lat %>
+    <%= form.text_field :incident_lat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

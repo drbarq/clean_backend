@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sightings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plausibility</th>
+      <th>Incident occurrence</th>
+      <th>Incident location</th>
+      <th>Witness gibberish</th>
+      <th>Blood alcohol level</th>
+      <th>Responding police department location</th>
+      <th>Incident long</th>
+      <th>Incident lat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sightings.each do |sighting| %>
+      <tr>
+        <td><%= sighting.plausibility %></td>
+        <td><%= sighting.incident_occurrence %></td>
+        <td><%= sighting.incident_location %></td>
+        <td><%= sighting.witness_gibberish %></td>
+        <td><%= sighting.blood_alcohol_level %></td>
+        <td><%= sighting.responding_police_department_location %></td>
+        <td><%= sighting.incident_long %></td>
+        <td><%= sighting.incident_lat %></td>
+        <td><%= link_to 'Show', sighting %></td>
+        <td><%= link_to 'Edit', edit_sighting_path(sighting) %></td>
+        <td><%= link_to 'Destroy', sighting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sighting', new_sighting_path %>

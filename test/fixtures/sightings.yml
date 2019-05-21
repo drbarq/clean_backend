@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plausibility: 1
+  incident_occurrence: 2019-05-21 10:47:41
+  incident_location: MyString
+  witness_gibberish: MyString
+  blood_alcohol_level: 1.5
+  responding_police_department_location: MyString
+  incident_long: 1.5
+  incident_lat: 1.5
+
+two:
+  plausibility: 1
+  incident_occurrence: 2019-05-21 10:47:41
+  incident_location: MyString
+  witness_gibberish: MyString
+  blood_alcohol_level: 1.5
+  responding_police_department_location: MyString
+  incident_long: 1.5
+  incident_lat: 1.5
